@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #e16120;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    width: 26px;
+    height: 26px;
+    margin-right: 8px;
+    margin-bottom: -2px;
+    filter: invert(100%) brightness(200%);
+}
+
+.nav-items {
+    margin-left: 50px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: auto;
+}
+
+.search-section {
+    background-image: url('./Assets/kitchen_bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 1000px;
+    padding: 80px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.search-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+#recipeSearchInput {
+    width: 20%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 120px;
+    font-size: 14px;
+    outline: none;
+}
+
+#recipeSearchButton {
+    background-color: #e16120;
+    color: white;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+#recipeSearchButton:hover {
+    background-color: white;
+    color: #e16120;
+}
+
+.info-section {
+    margin-top: 1rem;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 1024px) {
+    .nav-items {
+        display: none;
+    }
+
+    .hamburger {
+        margin-left: 0;
+    }
+
+    .search-section {
+        padding: 60px;
+        height: auto;
+    }
+
+    #recipeSearchInput {
+        width: 40%;
+    }
+
+    .info-section {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        margin-left: 0;
+    }
+
+    .search-section {
+        padding: 40px;
+        height: auto;
+    }
+
+    #recipeSearchInput {
+        width: 60%;
+    }
+
+    .info-section {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        margin-left: 0;
+    }
+
+    .search-section {
+        padding: 20px;
+        height: auto;
+    }
+
+    #recipeSearchInput {
+        width: 80%;
+    }
+
+    .info-section {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        margin-left: 0;
+    }
+
+    .search-section {
+        padding: 10px;
+        height: auto;
+    }
+
+    #recipeSearchInput {
+        width: 90%;
+    }
+
+    .info-section {
+        font-size: 12px;
+    }
+}
